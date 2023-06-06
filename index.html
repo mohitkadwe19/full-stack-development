@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<style>
+   .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 9999;
+}
+
+.popup:target {
+  display: block;
+}
+
+.popup-content {
+  background-color: #fff;
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.box {
+  box-sizing: content-box;
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+
+.box {
+  box-sizing: border-box;
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+
+</style>
+</head>
+<body>
+   
+<a href="#popup">Open Popup</a>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <h2>Popup Content</h2>
+    <p>This is the content of the popup.</p>
+    <a href="#close" class="close">Close</a>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
